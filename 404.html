@@ -216,10 +216,11 @@
     // 获取当前URL
     const currentUrl = window.location.href;
 
-    // 检测URL中是否包含%5C
-    if (currentUrl.includes('%5C')) {
-      // 替换%5C为/
-      const newUrl = currentUrl.replace(/%5C/g, '/');
+    
+    // 检测URL中是否包含%5C或\
+    if (currentUrl.includes('%5C') || currentUrl.includes('\\')) {
+      // 替换%5C或\为/
+      const newUrl = currentUrl.replace(/%5C|\\/g, '/');
       
       // 提取最后两个/之间的部分
       const parts = newUrl.split('/').filter(Boolean); // 分割并过滤空字符串
