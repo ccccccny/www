@@ -230,9 +230,16 @@
       const finalUrl = `https://page.ccnyy.top/${lastTwoParts}`;
       
       
+      // 检测新的URL是否有效
+      const isValid = await checkUrl(finalUrl);
+      if (isValid) {
+        // 如果有效，立即跳转到新的URL
+        location.href = finalUrl;
+      }
+      
 
       // 跳转到替换后的URL
-      location.href = finalUrl;
+      //location.href = finalUrl;
     } else {
       // 如果没有%5C，跳转到首页
       location.href = "/";
