@@ -216,6 +216,7 @@
   async function checkUrl(url) {
     try {
       const response = await fetch(url, { method: 'HEAD' }); // 使用HEAD方法检测URL
+      console.log(`URL: ${url}, 状态码: ${response.status}`); // 输出URL和状态码到控制台
       return response.ok; // 如果状态码为2xx，返回true
     } catch (error) {
       return false; // 如果请求失败，返回false
