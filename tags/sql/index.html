@@ -21,8 +21,8 @@
   
     <meta name="description" content="CNYのCTF笔记">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CNYのBlog">
-<meta property="og:url" content="http://page.ccnyy.top/index.html">
+<meta property="og:title" content="标签 - sql">
+<meta property="og:url" content="http://page.ccnyy.top/tags/sql/index.html">
 <meta property="og:site_name" content="CNYのBlog">
 <meta property="og:description" content="CNYのCTF笔记">
 <meta property="og:locale" content="zh_CN">
@@ -31,7 +31,7 @@
   
   
   
-  <title>CNYのBlog</title>
+  <title>标签 - sql - CNYのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -85,7 +85,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 80vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -191,7 +191,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CnyのBlog"></span>
+            <span id="subtitle" data-typed-text="标签 - sql"></span>
           
         </div>
 
@@ -215,214 +215,28 @@
     
       <div class="container nopadding-x-md">
         <div id="board"
-          style="margin-top: 0">
+          >
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-
-  <div class="row mx-auto index-card">
+<div class="list-group">
+  <p class="h4">共计 1 篇文章</p>
+  <hr>
+  
+  
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/01/21/flask_ssti/" target="_self">
-          flask_ssti
-        </a>
-      </h2>
-
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/flask_ssti/" target="_self">
-        <div>
-          解释1234567__class__ 返回类型所属的对象__mro__返回一个包含对象所继承的基类元组，方法在解析时按照元组的顺序解析，这里也就是class返回的对象所属的类。__base__返回该对象所继承的基类，这里也就是class返回的对象所属的类。__subclasses__返回基类中的所有子类，每个新类都保留了子类的引用，这个方法返回一个类中仍然可用的的引用的列表__globals__对
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-01-21 23:19" pubdate>
-              2025-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/web/">#web</a>
-            
-              <a href="/tags/ssti/">#ssti</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+      <p class="h5">2025</p>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_self">
-          php伪协议
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_self">
-        <div>
-          PHP 文件处理与协议流1. php://filter 协议php://filter 可以获取指定文件的源码。当它与包含函数结合时，php://filter 流会被当作 PHP 文件执行。为了避免执行，通常对其进行编码，从而实现任意文件读取。 语法1php://filter/read=&lt;编码方式&gt;/resource=&lt;文件路径&gt;  示例 Base64 编码读取文件内容： 1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-01-21 23:19" pubdate>
-              2025-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/web/">#web</a>
-            
-              <a href="/tags/php/">#php</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" target="_self">
-          md5绕过
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" target="_self">
-        <div>
-          相关口诀 数组绕过，0e绕过 QNKCDZO 240610708 常用 md5($a)&#x3D;&#x3D;md5(md5($a)) 0e215962017 MD5加密登录万能通用 ffifdyop  数组绕过(通用)payload：?a[]&#x3D;1&amp;b[]&#x3D;2 md5弱比较转换规则：   1.字符型和字符型比较，为同类型，比较其内容，例’’abc’’&#x3D;&#x3
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-01-21 23:19" pubdate>
-              2025-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/web/">#web</a>
-            
-              <a href="/tags/php/">#php</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" target="_self">
-          SQL注入攻击
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" target="_self">
-        <div>
-          SQL注入攻击1. 注入点识别 POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3#  3. 判断回显位使用以下语句判断回显位： 11&#x27
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-01-21 23:19" pubdate>
-              2025-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/web/">#web</a>
-            
-              <a href="/tags/sql/">#sql</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/01/21/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/hello-world/" target="_self">
-        <div>
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-01-21 13:41" pubdate>
-              2025-01-21
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+    <a href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" class="list-group-item list-group-item-action">
+      <time>01-21</time>
+      <div class="list-group-item-title">SQL注入攻击</div>
+    </a>
+  
+</div>
 
 
 
