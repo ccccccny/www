@@ -27,8 +27,14 @@
 <meta property="og:description" content="rxnifbeiyomezpplugho vol取证代码用法Volatility Foundation Volatility Framework 2.6  .&#x2F;volatility_2.6_lin64_standalone -f  文件名 imageinfo.&#x2F;volatility_2.6_lin64_standalone  -f 文件名 –profile&#x3D;[操作系统">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23173207.png">
+<meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23201246.png">
+<meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23202714.png">
+<meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87%5C%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23202822.png">
+<meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23203800.png">
+<meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23204112.png">
+<meta property="og:image" content="http://page.ccnyy.top/1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23204548.png">
 <meta property="article:published_time" content="2025-01-21T15:19:05.000Z">
-<meta property="article:modified_time" content="2025-01-24T07:51:50.731Z">
+<meta property="article:modified_time" content="2025-01-24T07:53:55.362Z">
 <meta property="article:author" content="ccnyy">
 <meta property="article:tag" content="misc">
 <meta property="article:tag" content="vol取证">
@@ -226,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.4k 字
+          4.3k 字
         
       </span>
     
@@ -237,7 +243,7 @@
         
         
         
-          37 分钟
+          36 分钟
         
       </span>
     
@@ -296,24 +302,24 @@
 <h2 id="Scanner-Checks"><a href="#Scanner-Checks" class="headerlink" title="Scanner Checks"></a>Scanner Checks</h2><p>CheckPoolSize          - 检查池块大小<br>CheckPoolType          - 检查池类型<br>KPCRScannerCheck       - 检查自引用指针以查找KPCR<br>MultiPrefixFinderCheck - 每页检查多个字符串，在偏移处完成<br>MultiStringFinderCheck - 每页检查多个字符串<br>PoolTagCheck           - 此扫描程序检查池标记的出现</p>
 <h1 id="vol取证-画图"><a href="#vol取证-画图" class="headerlink" title="vol取证-画图"></a>vol取证-画图</h1><h1 id="题1："><a href="#题1：" class="headerlink" title="题1："></a>题1：</h1><p>小明在学习中对各类文件加密的方式起了浓厚的兴趣，并把自己珍贵资料和 Flag 进行了套娃式加密。然而，他却在某天的凌晨三点选择了重装系统，本来他就记不住自己的密码，还丢失了备份密钥……</p>
 <p>据受害者回忆，【他曾经使用画图软件把密码写了下来】，尽管备份已经丢失，如果能成功看到程序运行的样子，说不定就找回密码了，但是硬盘的加密怎么办呢，哎呀~要是有软件能直接破解就好了www</p>
-<p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23173207.png" srcset="/img/loading.gif" lazyload alt="屏幕截图 2024-10-23 173207"></p>
+<p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23173207.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23173207"></p>
 <h6 id="根据题目得到了要去看windows的画图软件-我们去kali里去取证"><a href="#根据题目得到了要去看windows的画图软件-我们去kali里去取证" class="headerlink" title="根据题目得到了要去看windows的画图软件  我们去kali里去取证"></a>根据题目得到了要去看windows的画图软件  我们去kali里去取证</h6><p> .&#x2F;volatility_2.6_lin64_standalone -f  &#x2F;home&#x2F;kali&#x2F;Desktop&#x2F;chal.raw imageinfo用这个代码得到版本信息</p>
-<p>![屏幕截图 2024-10-23 201246](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-23 201246.png)</p>
+<p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23201246.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23201246"></p>
 <p>.&#x2F;volatility_2.6_lin64_standalone  -f &#x2F;home&#x2F;kali&#x2F;Desktop&#x2F;chal.raw –profile&#x3D;Win7SP1x64 pstree</p>
-<h6 id="要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程"><a href="#要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程" class="headerlink" title="要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程"></a>要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程</h6><p>![屏幕截图 2024-10-23 202714](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-23 202714.png)</p>
-<p>![屏幕截图 2024-10-23 202822](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片\屏幕截图 2024-10-23 202822.png)</p>
+<h6 id="要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程"><a href="#要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程" class="headerlink" title="要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程"></a>要得到画图工具的进程就要用到pstree将进程列表打印为树，去看要的画图工具进程</h6><p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23202714.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23202714"></p>
+<p><img src="/../../../../1md%E5%9B%BE%E7%89%87%5C%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23202822.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23202822"></p>
 <p>通过搜索得知mspaint.exe为windows的画图工具，从上述进程中看到mspaint.exede进程为 2804端口号</p>
 <h6 id="用memdump-将端口号进程转储进程的可寻址内存-得到端口号-dmp文件"><a href="#用memdump-将端口号进程转储进程的可寻址内存-得到端口号-dmp文件" class="headerlink" title="用memdump   将端口号进程转储进程的可寻址内存 得到端口号.dmp文件"></a>用memdump   将端口号进程转储进程的可寻址内存 得到端口号.dmp文件</h6><p>.&#x2F;volatility_2.6_lin64_standalone  -f &#x2F;home&#x2F;kali&#x2F;Desktop&#x2F;chal.raw –profile&#x3D;Win7SP1x64 memdump -p &lt;端口号&gt;  -D .&#x2F;          </p>
-<p>![屏幕截图 2024-10-23 203800](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-23 203800.png)</p>
-<h6 id="将得到的端口号-dmp文件改名为端口号-data文件放进GIMP中调整图片位置得到密码"><a href="#将得到的端口号-dmp文件改名为端口号-data文件放进GIMP中调整图片位置得到密码" class="headerlink" title="将得到的端口号.dmp文件改名为端口号.data文件放进GIMP中调整图片位置得到密码"></a>将得到的端口号.dmp文件改名为端口号.data文件放进GIMP中调整图片位置得到密码</h6><p>![屏幕截图 2024-10-23 204112](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-23 204112.png)</p>
-<h6 id="在GIMP中调整图片位置是先确定宽和高分贝为2560x1440-然后再来拉动位移找密码"><a href="#在GIMP中调整图片位置是先确定宽和高分贝为2560x1440-然后再来拉动位移找密码" class="headerlink" title="在GIMP中调整图片位置是先确定宽和高分贝为2560x1440,然后再来拉动位移找密码"></a>在GIMP中调整图片位置是先确定宽和高分贝为2560x1440,然后再来拉动位移找密码</h6><p>![屏幕截图 2024-10-23 204548](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-23 204548.png)</p>
-<h6 id="我们已经得到了密码了再看题目，就要去进行硬盘的解密"><a href="#我们已经得到了密码了再看题目，就要去进行硬盘的解密" class="headerlink" title="我们已经得到了密码了再看题目，就要去进行硬盘的解密"></a>我们已经得到了密码了再看题目，就要去进行硬盘的解密</h6><h3 id="硬盘的解密"><a href="#硬盘的解密" class="headerlink" title="硬盘的解密"></a>硬盘的解密</h3><h6 id="从题目的压缩包中得到的e盘双击挂载"><a href="#从题目的压缩包中得到的e盘双击挂载" class="headerlink" title="从题目的压缩包中得到的e盘双击挂载"></a>从题目的压缩包中得到的e盘双击挂载</h6><p>![屏幕截图 2024-10-24 171015](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 171015.png)</p>
-<h6 id="我们要用efdd得到48位密钥解锁"><a href="#我们要用efdd得到48位密钥解锁" class="headerlink" title="我们要用efdd得到48位密钥解锁"></a>我们要用efdd得到48位密钥解锁</h6><p>![屏幕截图 2024-10-24 171405](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 171405.png)</p>
-<p>![屏幕截图 2024-10-24 171431](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 171431.png)</p>
-<h6 id="我们要将得到-dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码"><a href="#我们要将得到-dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码" class="headerlink" title="我们要将得到.dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码"></a>我们要将得到.dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码</h6><p>![屏幕截图 2024-10-24 171513](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 171513.png)</p>
-<p>![屏幕截图 2024-10-24 171955](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 171955.png)</p>
-<p>![屏幕截图 2024-10-24 172102](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 172102.png)</p>
-<h6 id="就得到了flag"><a href="#就得到了flag" class="headerlink" title="就得到了flag"></a>就得到了flag</h6><p>![屏幕截图 2024-10-24 172152](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图 2024-10-24 172152.png)</p>
+<p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23203800.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23203800"></p>
+<h6 id="将得到的端口号-dmp文件改名为端口号-data文件放进GIMP中调整图片位置得到密码"><a href="#将得到的端口号-dmp文件改名为端口号-data文件放进GIMP中调整图片位置得到密码" class="headerlink" title="将得到的端口号.dmp文件改名为端口号.data文件放进GIMP中调整图片位置得到密码"></a>将得到的端口号.dmp文件改名为端口号.data文件放进GIMP中调整图片位置得到密码</h6><p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23204112.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23204112"></p>
+<h6 id="在GIMP中调整图片位置是先确定宽和高分贝为2560x1440-然后再来拉动位移找密码"><a href="#在GIMP中调整图片位置是先确定宽和高分贝为2560x1440-然后再来拉动位移找密码" class="headerlink" title="在GIMP中调整图片位置是先确定宽和高分贝为2560x1440,然后再来拉动位移找密码"></a>在GIMP中调整图片位置是先确定宽和高分贝为2560x1440,然后再来拉动位移找密码</h6><p><img src="/../../../../1md%E5%9B%BE%E7%89%87/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2024-10-23204548.png" srcset="/img/loading.gif" lazyload alt="屏幕截图2024-10-23204548"></p>
+<h6 id="我们已经得到了密码了再看题目，就要去进行硬盘的解密"><a href="#我们已经得到了密码了再看题目，就要去进行硬盘的解密" class="headerlink" title="我们已经得到了密码了再看题目，就要去进行硬盘的解密"></a>我们已经得到了密码了再看题目，就要去进行硬盘的解密</h6><h3 id="硬盘的解密"><a href="#硬盘的解密" class="headerlink" title="硬盘的解密"></a>硬盘的解密</h3><h6 id="从题目的压缩包中得到的e盘双击挂载"><a href="#从题目的压缩包中得到的e盘双击挂载" class="headerlink" title="从题目的压缩包中得到的e盘双击挂载"></a>从题目的压缩包中得到的e盘双击挂载</h6><p>![屏幕截图2024-10-24 171015](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 171015.png)</p>
+<h6 id="我们要用efdd得到48位密钥解锁"><a href="#我们要用efdd得到48位密钥解锁" class="headerlink" title="我们要用efdd得到48位密钥解锁"></a>我们要用efdd得到48位密钥解锁</h6><p>![屏幕截图2024-10-24 171405](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 171405.png)</p>
+<p>![屏幕截图2024-10-24 171431](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 171431.png)</p>
+<h6 id="我们要将得到-dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码"><a href="#我们要将得到-dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码" class="headerlink" title="我们要将得到.dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码"></a>我们要将得到.dmp文件和之前从GIMP得到的密码放入efdd中得到48为密码</h6><p>![屏幕截图2024-10-24 171513](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 171513.png)</p>
+<p>![屏幕截图2024-10-24 171955](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 171955.png)</p>
+<p>![屏幕截图2024-10-24 172102](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 172102.png)</p>
+<h6 id="就得到了flag"><a href="#就得到了flag" class="headerlink" title="就得到了flag"></a>就得到了flag</h6><p>![屏幕截图2024-10-24 172152](..&#x2F;..&#x2F;..&#x2F;..&#x2F;1md图片&#x2F;屏幕截图2024-10-24 172152.png)</p>
 
                 
               </div>
