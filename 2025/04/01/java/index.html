@@ -27,7 +27,7 @@
 <meta property="og:description" content="Stringchar[] a和String[] a的区别char存储单个字符，string存储字符串对象  char[] a：数组元素以单个字符的形式存在。例如，&#123;&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;&#125; 。 String[] a：数组元素以字符串的形式存在。例如，&#123;&quot;H">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-01T10:16:00.000Z">
-<meta property="article:modified_time" content="2025-04-01T10:18:07.453Z">
+<meta property="article:modified_time" content="2025-04-09T11:51:26.383Z">
 <meta property="article:author" content="ccnyy">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.4k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          19 分钟
+          20 分钟
         
       </span>
     
@@ -276,7 +276,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年4月1日 晚上
+                    本文最后更新于 2025年4月9日 晚上
                   
                 
               </p>
@@ -365,34 +365,34 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">add</span> &#123;<br>    <span class="hljs-comment">// 定义一个可变参数（不定长参数）的加法方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">add</span><span class="hljs-params">(<span class="hljs-type">int</span>... x)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; x.length; i++) &#123;<br>            result += x[i];<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 调用 add 方法并传入参数</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);<br>        <span class="hljs-comment">// 打印计算结果</span><br>        System.out.println(<span class="hljs-string">&quot;这些数的和是: &quot;</span> + sum);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="构造方法（不太懂）"><a href="#构造方法（不太懂）" class="headerlink" title="构造方法（不太懂）"></a>构造方法（不太懂）</h4><h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ol>
+<h4 id="构造方法（类似python的-init-，在创建类的对象时对对象进行初始化，new的时候调用）"><a href="#构造方法（类似python的-init-，在创建类的对象时对对象进行初始化，new的时候调用）" class="headerlink" title="构造方法（类似python的__init__，在创建类的对象时对对象进行初始化，new的时候调用）"></a>构造方法（类似python的__init__，在创建类的对象时对对象进行初始化，new的时候调用）</h4><h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ol>
 <li><p>方法名与类名相同</p>
 <p>构造方法的名称必须和所在类的名称完全一致，包含大小写。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> &#123;<br>    <span class="hljs-comment">// 构造方法，方法名与类名相同</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Person</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Person 对象被创建&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>没有返回类型</p>
 <p>构造方法没有返回类型，连 <code>void</code> 也不用写。这是构造方法和普通方法的一个重要区别。普通方法需要明确指定返回类型，如 <code>int</code>、<code>String</code> 等。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> &#123;<br>    <span class="hljs-comment">// 构造方法，没有返回类型</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Student 对象被创建&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> &#123;<br>    <span class="hljs-comment">// 构造方法，没有返回类型</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Student 对象被创建&quot;</span>);<br>    &#125;<br>&#125;<br><span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-number">25</span>);   <span class="hljs-comment">//开头的Student表示这个实例化的student对象是属于Student类的，类似定义一个String s = &quot;123&quot;</span><br><span class="hljs-comment">//java10开始可以通过var自动判断是属于哪个类，即可用var代替Student</span><br></code></pre></td></tr></table></figure>
 
 
 </li>
 <li><p>创建对象时自动调用</p>
 <p>当使用 <code>new</code> 关键字创建类的对象时，会自动调用相应的构造方法。构造方法在对象实例化的过程中起到初始化对象的作用。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Book</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Book</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Book 对象被创建并初始化&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 创建 Book 对象，自动调用构造方法</span><br>        <span class="hljs-type">Book</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Book</span>();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Book</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Book</span><span class="hljs-params">()</span> &#123;   <span class="hljs-comment">//方法名和类名同名，为构造方法</span><br>        System.out.println(<span class="hljs-string">&quot;Book 对象被创建并初始化&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 创建 Book 对象，自动调用构造方法</span><br>        <span class="hljs-type">Book</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Book</span>();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 </li>
 <li><p>可以重载</p>
 <p>和普通方法一样，构造方法也支持重载。也就是说，一个类中可以定义多个构造方法，只要它们的参数列表不同（参数的个数、类型或顺序不同）。通过构造方法重载，可以根据不同的需求来创建对象。</p>
-<p>即可以创建多个<strong>同名但参数列表不同</strong>的构造方法。通过不同的参数列表（参数的个数、类型或顺序不同）来确定使用哪个构造方法。</p>
+<p>即java可以创建多个<strong>同名但参数列表不同</strong>的构造方法。通过不同的参数列表（参数的个数、类型或顺序不同）来确定使用哪个构造方法。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Rectangle</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> width;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> height;<br><br>    <span class="hljs-comment">// 无参构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Rectangle</span><span class="hljs-params">()</span> &#123;<br>        width = <span class="hljs-number">0</span>;<br>        height = <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 带一个参数的构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Rectangle</span><span class="hljs-params">(<span class="hljs-type">int</span> side)</span> &#123;<br>        width = side;<br>        height = side;<br>    &#125;<br><br>    <span class="hljs-comment">// 带两个参数的构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Rectangle</span><span class="hljs-params">(<span class="hljs-type">int</span> width, <span class="hljs-type">int</span> height)</span> &#123;<br>        <span class="hljs-built_in">this</span>.width = width;<br>        <span class="hljs-built_in">this</span>.height = height;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 </li>
 <li><p>若未定义构造方法，编译器会提供默认构造方法</p>
 </li>
-<li><p>可以使用 <code>this</code> 或 <code>super</code> 关键字</p>
-</li>
+<li><p>可以使用 <code>this</code> 或 <code>super</code> 关键字（构造方法接收外部参数，传递给类内部的成员变量，如构造方法Person接收name和age，通过<code>this</code>关键字传递给name和age）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> &#123;<br>    String name;   <span class="hljs-comment">//定义成员变量</span><br>    <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-comment">// 构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Person</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Person</span> <span class="hljs-variable">person</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-number">25</span>);<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure></li>
 </ol>
 <h5 id="定义语法"><a href="#定义语法" class="headerlink" title="定义语法"></a>定义语法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Book</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">Book</span><span class="hljs-params">()</span> &#123;   <span class="hljs-comment">//构造方法</span><br>	&#125;<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Book</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">Book</span><span class="hljs-params">(<span class="hljs-type">int</span> args)</span> &#123;   <span class="hljs-comment">//有参数构造方法</span><br>        <span class="hljs-comment">//对成员变量进行初始化</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -439,7 +439,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年4月1日</div>
+          <div>2025年4月9日</div>
         </div>
       
       
