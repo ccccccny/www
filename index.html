@@ -76,7 +76,119 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -229,6 +341,48 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2025/10/21/rsa/" target="_self">
+          RSA详解
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/21/rsa/" target="_self">
+        <div>
+          使用gmpy2而不是Crypto中的数学函数（gmpy2速度快，可直接pip安装，不支持低版本python）  提供pqec求m 123456789101112131415161718192021from Crypto.Util.number import *p = 10554915510546378513140074459658086644656654144905337809416976066
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-21 22:54" pubdate>
+              2025-10-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">#密码学</a>
+            
+              <a href="/tags/rsa/">#rsa</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2025/04/01/java/" target="_self">
           java学习
         </a>
@@ -237,7 +391,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/04/01/java/" target="_self">
         <div>
-          部分来自吉林大学出版社《零基础学Java》 java学习Stringchar[] a和String[] a的区别char存储单个字符，string存储字符串对象  char[] a：数组元素以单个字符的形式存在。例如，&#123;&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;&#125; 。 String[] a：数组
+          部分来自吉林大学出版社《零基础学Java》 java学习 String char[] a和String[] a的区别 char存储单个字符，string存储字符串对象  char[] a：数组元素以单个字符的形式存在。例如，&#123;'H', 'e', 'l', 'l', 'o'&#125; 。 String[] a：数组元素以字符串的形式存在。例如，&#123;&quot;Hello&quot
         </div>
       </a>
 
@@ -277,7 +431,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/03/06/wordpress/" target="_self">
         <div>
-          12sudo apt install software-properties-common -ysudo add-apt-repository ppa:ondrej/php -y  在执行 sudo add-apt-repository ppa:ondrej/php 时，系统可能会提示你按回车键继续，按照提示操作即可。添加完成后，更新软件包列表： 1sudo apt update  123456s
+          12sudo apt install software-properties-common -ysudo add-apt-repository ppa:ondrej/php -y 在执行 sudo add-apt-repository ppa:ondrej/php 时，系统可能会提示你按回车键继续，按照提示操作即可。添加完成后，更新软件包列表： 1sudo apt update 123456sud
         </div>
       </a>
 
@@ -325,7 +479,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/flask_ssti/" target="_self">
         <div>
-          解释1234567__class__ 返回类型所属的对象__mro__返回一个包含对象所继承的基类元组，方法在解析时按照元组的顺序解析，这里也就是class返回的对象所属的类。__base__返回该对象所继承的基类，这里也就是class返回的对象所属的类。__subclasses__返回基类中的所有子类，每个新类都保留了子类的引用，这个方法返回一个类中仍然可用的的引用的列表__globals__对
+          解释 1234567__class__ 返回类型所属的对象__mro__返回一个包含对象所继承的基类元组，方法在解析时按照元组的顺序解析，这里也就是class返回的对象所属的类。__base__返回该对象所继承的基类，这里也就是class返回的对象所属的类。__subclasses__返回基类中的所有子类，每个新类都保留了子类的引用，这个方法返回一个类中仍然可用的的引用的列表__globals__
         </div>
       </a>
 
@@ -359,15 +513,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_self">
-          php伪协议
+        <a href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" target="_self">
+          md5绕过
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" target="_self">
         <div>
-          PHP 文件处理与协议流1. php://filter 协议php://filter 可以获取指定文件的源码。当它与包含函数结合时，php://filter 流会被当作 PHP 文件执行。为了避免执行，通常对其进行编码，从而实现任意文件读取。 语法1php://filter/read=&lt;编码方式&gt;/resource=&lt;文件路径&gt;  示例 Base64 编码读取文件内容： 1
+          相关口诀  数组绕过，0e绕过 QNKCDZO 240610708 常用 md5($a)==md5(md5($a)) 0e215962017 MD5加密登录万能通用 ffifdyop  数组绕过(通用) payload：?a[]=1&amp;b[]=2 md5弱比较 转换规则： 1.字符型和字符型比较，为同类型，比较其内容，例’‘abc’‘==’‘c’’ =&gt; false 2.数字型和数字型
         </div>
       </a>
 
@@ -401,15 +555,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" target="_self">
-          md5绕过
+        <a href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_self">
+          php伪协议
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/md5%E7%BB%95%E8%BF%87/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_self">
         <div>
-          相关口诀 数组绕过，0e绕过 QNKCDZO 240610708 常用 md5($a)&#x3D;&#x3D;md5(md5($a)) 0e215962017 MD5加密登录万能通用 ffifdyop  数组绕过(通用)payload：?a[]&#x3D;1&amp;b[]&#x3D;2 md5弱比较转换规则：   1.字符型和字符型比较，为同类型，比较其内容，例’’abc’’&#x3D;&#x3
+          PHP 文件处理与协议流 1. php://filter 协议 php://filter 可以获取指定文件的源码。当它与包含函数结合时，php://filter 流会被当作 PHP 文件执行。为了避免执行，通常对其进行编码，从而实现任意文件读取。 语法 1php://filter/read=&lt;编码方式&gt;/resource=&lt;文件路径&gt; 示例   Base64 编码读取文件内
         </div>
       </a>
 
@@ -451,7 +605,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/sql%E6%B3%A8%E5%85%A5/" target="_self">
         <div>
-          SQL注入攻击1. 注入点识别 POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3#  3. 判断回显位使用以下语句判断回显位： 11&#x27
+          SQL注入攻击 1. 注入点识别  POST请求：使用 # 注释符，最好用 %23 代替。 GET请求：使用 --+ 注释符。 ID错误：使用错误的ID以覆盖回显。  2. 确定列数 使用以下语句通过判断有无报错来确定列数： 1231&#x27; order by 1#1&#x27; order by 2#1&#x27; order by 3# 3. 判断回显位 使用以下语句判断回显位： 11&#
         </div>
       </a>
 
@@ -485,48 +639,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2025/01/21/%E6%9C%A8%E9%A9%AC/" target="_self">
-          一句话木马与文件头过滤
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/%E6%9C%A8%E9%A9%AC/" target="_self">
-        <div>
-          一句话木马与文件头过滤一句话木马PHP 一句话木马1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt;  1&lt;?php eval($_POST[aaa]) ?&gt;  1&lt;?=eval($_POST[&#x27;a&#x27;]);?&gt;  // 短标签绕过 PHP  ASP 一句话木马1&lt;%eval request (&quot;
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-01-21 23:19" pubdate>
-              2025-01-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/web/">#web</a>
-            
-              <a href="/tags/php/">#php</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
         <a href="/2025/01/21/vol%E5%8F%96%E8%AF%811/" target="_self">
           vol取证
         </a>
@@ -535,7 +647,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/vol%E5%8F%96%E8%AF%811/" target="_self">
         <div>
-          vol取证代码用法Volatility Foundation Volatility Framework 2.6  .&#x2F;volatility_2.6_lin64_standalone -f  文件名 imageinfo.&#x2F;volatility_2.6_lin64_standalone  -f 文件名 –profile&#x3D;[操作系统] [插件参数] 代码ProfilesVi
+          vol取证代码 用法 Volatility Foundation Volatility Framework 2.6 ./volatility_2.6_lin64_standalone -f  文件名 imageinfo ./volatility_2.6_lin64_standalone  -f 文件名 --profile=[操作系统] [插件参数] 代码 Profiles VistaSP0x64
         </div>
       </a>
 
@@ -556,6 +668,48 @@
               <a href="/tags/misc/">#misc</a>
             
               <a href="/tags/vol%E5%8F%96%E8%AF%81/">#vol取证</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/01/21/%E6%9C%A8%E9%A9%AC/" target="_self">
+          一句话木马与文件头过滤
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/01/21/%E6%9C%A8%E9%A9%AC/" target="_self">
+        <div>
+          一句话木马与文件头过滤 一句话木马 PHP 一句话木马 1&lt;?php @eval($_POST[&#x27;pass&#x27;]);?&gt; 1&lt;?php eval($_POST[aaa]) ?&gt; 1&lt;?=eval($_POST[&#x27;a&#x27;]);?&gt;  // 短标签绕过 PHP ASP 一句话木马 1&lt;%eval request (&quot
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-01-21 23:19" pubdate>
+              2025-01-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/web/">#web</a>
+            
+              <a href="/tags/php/">#php</a>
             
           </div>
         
